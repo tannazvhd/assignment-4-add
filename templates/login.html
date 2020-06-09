@@ -1,0 +1,50 @@
+    
+    {% extends "base.html" %}
+    {% block body %} 
+
+
+    <div class="container">
+        <form action="" method="POST">
+        {{ form.csrf_token() }}
+            <div class="form-group offset-4">
+                <div class="col-5">
+                <h2 class="title mt-3">Login</h2>
+                </div>
+            
+                <div class="col-5">
+                    <label for="">Email Address</label>
+                    {{ form.email(class='form-control', placeholder='your@email.com') }}
+                    <small id="helpId" class="text-muted">Enter your email address</small>
+                </div>
+                <div class="col-5">
+                  <label for="">Password</label>
+                  {{ form.password(class='form-control', placeholder='Please enter your password') }}
+                  <small id="helpId" class="text-muted">Please enter your password</small>
+              </div>
+             
+            </div>
+        
+        
+            <div class="form-group row">
+              
+                <div class="col offset-4">
+                    {{ form.submit(class='btn btn-primary') }}
+                </div>
+            </div>
+        </form>
+    </div>
+     <!--
+        <div class="formwrapper">
+            <h2 class="title">Login</h2>
+            <form method="POST" action="http://127.0.0.1:5000/log">
+                {{ form.csrf_token }}
+
+                <div class="form-field">{{ form.email.label }} {{ form.email }}</div>
+                <div class="form-field">{{ form.password.label }} {{ form.password }}</div>
+                {{ form.submit }}
+            </form>
+          </div> -->
+      
+    {% endblock %}
+
+   

@@ -1,0 +1,33 @@
+
+{% extends "base.html" %}
+
+{% block nav %}
+<li class="nav-item active">
+    <a class="nav-link" href="{{ url_for('profile') }}">Profile <span class="sr-only">(current)</span></a>
+  </li>
+{% endblock %}
+
+
+{%block body%}
+
+<h1 class="offset-4 mt-3">Welcome, you have successfully logged in!</h1>
+{%endblock%}
+
+{% block detail %}
+<div class="card offset-4" style="width: 20rem;">
+    <div class="card-header">
+      Detailed information
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">your firstname: {{firstname}}</li>
+      <li class="list-group-item">your lastname:{{lastname}}</li>
+      <li class="list-group-item">your date of birth:{{dateOfBirth}}</li>
+      <li class="list-group-item">your email:{{email}}
+    </li>
+
+    </ul>
+  </div>
+
+
+{% endblock %}
+

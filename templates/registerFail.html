@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block body %} 
+
+<li><strong>error:</strong> {{ msg }}</li>
+
+<a href="{{ url_for('register') }}">try again</a>
+
+
+{% endblock %}
